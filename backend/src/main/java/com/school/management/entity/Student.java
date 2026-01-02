@@ -19,6 +19,11 @@ public class Student {
     private String firstName;
     private String lastName;
     private String email;
-    private String grade;
+    private String password;
+    private boolean isApproved = false;
+    
+    @ManyToOne
+    @JoinColumn(name = "class_id")
+    private ClassRoom classRoom;
 
 }
